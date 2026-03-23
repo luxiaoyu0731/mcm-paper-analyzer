@@ -1,0 +1,50 @@
+# MCM/ICM O奖论文分析系统配置文件
+# 复制此文件为 config.yaml 并填入你的 API Key
+
+# LLM 配置
+# 支持 OpenRouter / OpenAI / DeepSeek 等 OpenAI 兼容 API
+# 也支持 Claude CLI 模式 (use_cli=True)，无需 API Key
+llm:
+  provider: "openrouter"                    # openrouter / openai / deepseek
+  api_key: "your_api_key_here"              # ← 替换为你的 API Key
+  base_url: "https://openrouter.ai/api/v1"  # API 端点
+  model: "anthropic/claude-sonnet-4"        # 推荐模型
+  max_tokens: 8192
+  temperature: 0.7
+
+# Embedding 配置 (本地运行，无需 API)
+embedding:
+  model_name: "BAAI/bge-large-zh-v1.5"  # 中英双语，适合美赛论文
+  device: "cpu"                          # cpu / cuda / mps (Mac M系列用 mps)
+  batch_size: 32
+
+# 向量数据库配置
+vectorstore:
+  persist_directory: "./data/chroma_db"
+  collection_coarse: "o_award_coarse"
+  collection_fine: "o_award_fine"
+
+# 分块配置
+chunking:
+  coarse_size: 1500
+  coarse_overlap: 150
+  fine_size: 300
+  fine_overlap: 30
+
+# 检索配置
+retrieval:
+  top_k_coarse: 10
+  top_k_fine: 5
+  use_reranker: false
+  reranker_model: "BAAI/bge-reranker-base"
+
+# 数据路径
+paths:
+  o_award_papers: "./data/o_award_papers"
+  gene_profile: "./data/gene_profile.json"
+  parsed_papers: "./data/parsed_papers"
+
+# Context Window 管理
+context:
+  max_context_tokens: 60000
+  section_by_section: true

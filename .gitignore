@@ -1,0 +1,45 @@
+# Data (too large for git, 6GB+)
+mcm-analyzer/data/chroma_db/
+mcm-analyzer/data/o_award_*/
+mcm-analyzer/data/parsed_papers/
+mcm-analyzer/data/gene_profile.json
+mcm-analyzer/data/paper_letter_map.json
+
+# User papers & reports
+*.pdf
+mcm-analyzer/report_*.md
+
+# Raw O-award papers source
+②历届获奖论文中英两版（2005-2025）/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.so
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Config with secrets (use config.example.yaml)
+mcm-analyzer/config.yaml
+
+# Misc
+*.html
+*.log
+.claude/

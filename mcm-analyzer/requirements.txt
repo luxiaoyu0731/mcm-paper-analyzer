@@ -1,0 +1,27 @@
+# MCM/ICM O奖论文分析系统依赖
+
+# PDF 解析
+PyMuPDF>=1.23.0          # fitz - PDF文本提取
+pytesseract>=0.3.10      # OCR fallback (需安装 tesseract-ocr)
+
+# 文本分块
+langchain-text-splitters>=0.2.0
+
+# Embedding
+sentence-transformers>=2.2.0
+
+# 向量数据库
+chromadb>=0.4.0
+
+# LLM 调用 (OpenAI兼容 - DeepSeek)
+openai>=1.0.0
+
+# 配置
+pyyaml>=6.0
+
+# CLI
+click>=8.0
+rich>=13.0               # 美化终端输出
+
+# 工具
+tqdm>=4.65.0
