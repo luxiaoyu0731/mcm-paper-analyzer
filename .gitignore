@@ -43,3 +43,19 @@ mcm-analyzer/config.yaml
 *.html
 *.log
 .claude/
+
+# Local credentials, caches and temporary artifacts
+.env.*
+!.env*.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.py[cod]
+.pytest_cache/
+Thumbs.db
+*.tmp
+*.bak
+node_modules/
+.cache/
+!.env*.example
