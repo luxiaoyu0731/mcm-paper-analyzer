@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-06",
+  "tool": "OpenAI built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset: beautiful wide GitHub README hero for MCM Paper Analyzer, a retrieval-augmented research paper review tool. Ivory and muted indigo editorial paper sculpture: open research manuscript with clean abstract equation shapes, magnifying lens over cited paragraph, carefully ordered reference cards connected by thin lines. Warm amber accents, refined library atmosphere, tactile 3D, generous breathing room. No text, no numbers, no award medals, no fake UI, no quantitative charts. Landscape.",
+  "asset": "project-hero.png",
+  "sha256": "7d78d086239924cc73520837abd055201b277c3e4354a844d4a2641e98b982b5",
+  "review": "Concept illustration inspected; no fabricated UI or metrics; not a system screenshot."
+}

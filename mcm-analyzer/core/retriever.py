@@ -73,7 +73,7 @@ class Retriever:
             for r in results:
                 if r["chunk_id"] not in seen_ids:
                     seen_ids.add(r["chunk_id"])
-                    all_results.append(r)
+                    all_results.append(dict(r))
 
         # 路径 1: 语义检索（兜底，大范围）
         r1 = self.vectorstore.search(
