@@ -1,16 +1,30 @@
 # MCM Paper Analyzer
 
+[English](README.en.md)
+
 用你提供的参考论文，检索相关方法与章节，生成可对照原文修改的论文诊断报告。
 
 ![论文检索概念插画](docs/media/project-hero.png)
 
 Python · PyMuPDF · ChromaDB · RAG · Apache-2.0
 
+![Recorded walkthrough](docs/media/walkthrough.gif)
+
+演示说明：真实离线检索命令输出；固定向量/存储替身和自制材料，不是 LLM 诊断或获奖论文。
+
 ## 核心功能
 
 - 提取 PDF 文本、章节与图片，建立粗细两层检索索引。
 - 按语义、章节、题型与题号召回参考内容，并去重排序。
 - 结合待诊断论文生成章节分析、对标与修改建议，输出 Markdown。
+
+## 免费查看样例
+
+```sh
+python3 examples/try_retrieval.py --destination ../mcm-sample
+```
+
+运行真实检索合并与排序代码，生成带引用的自制样例报告；不需要密钥，不代表真实模型诊断效果。[样例说明](examples/README.md)。
 
 ## 快速开始
 
