@@ -55,3 +55,5 @@ Model scores are not award probabilities. The full PDF-to-model-to-report pipeli
 [Apache-2.0](LICENSE)
 
 [Report a bug](https://github.com/luxiaoyu0731/mcm-paper-analyzer/issues/new?template=bug_report.yml) · [First-use feedback](https://github.com/luxiaoyu0731/mcm-paper-analyzer/issues/new?template=first_use.yml) · [Starter tasks](CONTRIBUTING.md)
+
+[Versioned releases and artifact verification](docs/releasing.md)
