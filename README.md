@@ -29,7 +29,7 @@ cp config.example.yaml config.yaml
 .venv/bin/python main.py analyze --paper ./my_paper.pdf --compare
 ```
 
-参考论文不随仓库分发。首次使用可能下载向量模型；诊断会将论文片段发送给配置的模型服务，启用图片分析时图片也可能外发。不要提交配置密钥。
+参考论文不随仓库分发。首次使用可能下载向量模型；导入阶段提炼论文模式和诊断阶段都会调用配置的模型服务并可能收费。`--no-vision` 只跳过图片分析，不关闭文本模型调用。论文片段可能外发，配置密钥不要提交到仓库。
 
 <details>
 <summary>开发与使用边界</summary>

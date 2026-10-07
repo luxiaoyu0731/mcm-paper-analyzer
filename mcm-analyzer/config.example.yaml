@@ -3,7 +3,7 @@
 
 # LLM 配置
 # 支持 OpenRouter / OpenAI / DeepSeek 等 OpenAI 兼容 API
-# 也支持 Claude CLI 模式 (use_cli=True)，无需 API Key
+# 当前 main.py 命令入口使用 API 客户端，需要密钥；不提供 use_cli 配置开关
 llm:
   provider: "openrouter"                    # openrouter / openai / deepseek
   api_key: "your_api_key_here"              # ← 替换为你的 API Key
