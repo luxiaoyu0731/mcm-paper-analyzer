@@ -2,11 +2,13 @@
 
 [English](README.en.md)
 
-用你提供的参考论文，检索相关方法与章节，生成可对照原文修改的论文诊断报告。
+给需要改进建模论文的参赛者：从自备参考论文检索方法与章节，把诊断、引用和修改建议整理成一份报告。
 
 ![论文检索概念插画](docs/media/project-hero.png)
 
 Python · PyMuPDF · ChromaDB · RAG · Apache-2.0
+
+[直接阅读完整合成样例报告](docs/sample-report.md)
 
 ![Recorded walkthrough](docs/media/walkthrough.gif)
 
@@ -61,3 +63,5 @@ python3 -B -m unittest discover -s tests -v
 </details>
 
 [Apache-2.0](LICENSE) · [素材说明](docs/media/README.md)
+
+[遇到问题](https://github.com/luxiaoyu0731/mcm-paper-analyzer/issues/new?template=bug_report.yml) · [告诉我们哪一步不清楚](https://github.com/luxiaoyu0731/mcm-paper-analyzer/issues/new?template=first_use.yml) · [从小任务参与](CONTRIBUTING.md)

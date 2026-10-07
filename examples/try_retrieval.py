@@ -29,10 +29,11 @@ def run(destination):
     results = retriever.retrieve_for_section("Demand forecast validation", section_type="modeling", problem_letter="C")
     assert len(results) == 2 and json.dumps(store.rows, sort_keys=True) == original
     assert results == retriever.retrieve_for_section("Demand forecast validation", section_type="modeling", problem_letter="C")
-    report = "# Synthetic retrieval walkthrough\n\nNo PDF, embedding model or LLM was used. This illustrates provenance and report format, not an AI evaluation.\n\n## Retrieved references\n\n"
+    report = "# Synthetic retrieval walkthrough\n\nNo PDF, embedding model or LLM was used. This illustrates provenance and report format, not an AI evaluation.\n\n## Input\n\nSection: demand forecast validation. Two self-authored reference passages are returned by a synthetic store and fixed vector.\n\n## Retrieved references\n\n"
     for row in results:
         report += f"- [{row['chunk_id']}] {row['text']}\n"
-    report += "\n## Example revision checklist (manually authored)\n\n1. Document the training/validation date split.\n2. Compare with a seasonal baseline.\n3. Link each revision to its reference above.\n"
+    report += "\n## Review notes (manually authored)\n\n| Observation | Suggested change | Reference |\n| --- | --- | --- |\n| A random split can mix future observations into training | State the cutoff date and hold out later observations | sample-1 |\n| A complex model without a baseline lacks a useful comparison | Add seasonal baseline errors on the same holdout | sample-2 |\n\n## Revision checklist (manually authored)\n\n1. Document the training/validation date split.\n2. Compare with a seasonal baseline.\n3. Link each revision to its reference above.\n"
+    report += "\n## Acceptance and limits\n\nThe real retriever merged two unique passages consistently without changing stored rows. Check each citation against retrieval.json. Mathematical validity, PDF parsing, semantic relevance and model diagnosis are not evaluated by this synthetic example.\n"
     save_report(report, str(root / "sample-report.md"))
     (root / "retrieval.json").write_text(json.dumps(results, indent=2) + "\n")
     print(report)

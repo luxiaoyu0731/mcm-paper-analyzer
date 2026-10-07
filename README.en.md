@@ -8,6 +8,8 @@ Retrieve relevant methods and sections from your reference papers, then generate
 
 Python · PyMuPDF · ChromaDB · RAG · Apache-2.0
 
+[Read the complete synthetic sample report](docs/sample-report.md)
+
 ![Recorded walkthrough](docs/media/walkthrough.gif)
 
 Recorded actual offline command output with synthetic passages and fixed retrieval substitutes; not an LLM evaluation.
@@ -51,3 +53,5 @@ Model scores are not award probabilities. The full PDF-to-model-to-report pipeli
 </details>
 
 [Apache-2.0](LICENSE)
+
+[Report a bug](https://github.com/luxiaoyu0731/mcm-paper-analyzer/issues/new?template=bug_report.yml) · [First-use feedback](https://github.com/luxiaoyu0731/mcm-paper-analyzer/issues/new?template=first_use.yml) · [Starter tasks](CONTRIBUTING.md)
